@@ -4,12 +4,13 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BaggageSortingSimulator.Model;
 
 namespace BaggageSortingSimulator.System
 {
     class DAL
     {
-        Dictionary<int, string> Destinations = new Dictionary<int, string>();
+        public Dictionary<int, string> Destinations = new Dictionary<int, string>();
 
         private void CreateOfferedDestinations()
         {
@@ -36,6 +37,10 @@ namespace BaggageSortingSimulator.System
             }
             
            
+        }
+        public void Departure(Luggage lug)
+        {
+
         }
         public void TestDAl()
         {

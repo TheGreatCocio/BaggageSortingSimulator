@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BaggageSortingSimulator.System;
+using BaggageSortingSimulator.Model;
 
 namespace BaggageSortingSimulator
 {
@@ -11,7 +12,10 @@ namespace BaggageSortingSimulator
     {
         private static SortingMachine instance;
         private DAL dal = new DAL();
-        List<string> Terminals = new List<string>();
+        private Terminal term = new Terminal();
+        public Queue<Luggage> Luggages = new Queue<Luggage>();
+        List<Terminal> Terminals = new List<Terminal>();
+
         public static SortingMachine Instance
         {
             get
@@ -27,53 +31,62 @@ namespace BaggageSortingSimulator
         {
 
         }
-        public void SendToTerminal(int terminalNo)
+        public void SendToTerminal(int dest)
         {
-            
-            
-            
-            switch (terminalNo)
+            foreach(Luggage l in Luggages)
             {
-                case 0:
-                    Terminals.Add("Not Active");
-                    break;
-                case 1:
-                    Terminals.Add(dal.GetDestination(0));
-                    break;
-                case 2:
-                    Terminals.Add(dal.GetDestination(1));
-                    break;
-                case 3:
-                    Terminals.Add(dal.GetDestination(2));
-                    break;
-                case 4:
-                    Terminals.Add(dal.GetDestination(3));
-                    break;
-                case 5:
-                    Terminals.Add(dal.GetDestination(4));
-                    break;
-                case 6:
-                    Terminals.Add(dal.GetDestination(5));
-                    break;
-                case 7:
-                    Terminals.Add(dal.GetDestination(6));
-                    break;
-                case 8:
-                    Terminals.Add(dal.GetDestination(7));
-                    break;
+                if (dal.Destinations.ContainsKey(l.Destination))
+                {
+                    //send to terminal
+                    Terminals[l.Destination].TerminalConveyor.Enqueue(l);
                     
+                }
+                else
+                {
+                    //Send to lost and found
+                }
             }
 
+            
         }
-        public string Test()
-        {
-            string test = "";
-            foreach (string t in Terminals)
-            {
-                test=t;
-            }
-            return test;
-        }
+        
+        //public void SetTerminalStatus(int terminalNo)//Checks what status the terminal have
+        //{
+
+        //    switch (terminalNo)
+        //    {
+        //        case 0:
+        //            Terminals.Add("Not Active");
+        //            break;
+        //        case 1:
+        //            Terminals.Add(dal.GetDestination(0));
+        //            break;
+        //        case 2:
+        //            Terminals.Add(dal.GetDestination(1));
+        //            break;
+        //        case 3:
+        //            Terminals.Add(dal.GetDestination(2));
+        //            break;
+        //        case 4:
+        //            Terminals.Add(dal.GetDestination(3));
+        //            break;
+        //        case 5:
+        //            Terminals.Add(dal.GetDestination(4));
+        //            break;
+        //        case 6:
+        //            Terminals.Add(dal.GetDestination(5));
+        //            break;
+        //        case 7:
+        //            Terminals.Add(dal.GetDestination(6));
+        //            break;
+        //        case 8:
+        //            Terminals.Add(dal.GetDestination(7));
+        //            break;
+                    
+        //    }
+
+        //}
+        
     }
     
 }
