@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaggageSortingSimulator.Model
 {
-    class FlightPlan
+    public class FlightPlan
     {
         private int terminalNumber;
         private DateTime timeBeforeLiftoff;
@@ -14,7 +14,7 @@ namespace BaggageSortingSimulator.Model
         public int TerminalNumber { get => terminalNumber; set => terminalNumber = value; }
         public DateTime TimeBeforeLiftoff { get => timeBeforeLiftoff; private set => timeBeforeLiftoff = value; }
 
-        public FlightPlan()
+        public FlightPlan(int terminalNumber)
         {
             TerminalNumber = terminalNumber;
         }

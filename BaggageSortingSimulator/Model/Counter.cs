@@ -10,12 +10,19 @@ namespace BaggageSortingSimulator.Model
     {
         private static int counterIncrementer = 1;
         private int counterId;
+        private bool isOpen;
 
         public int CounterId { get => counterId; set => counterId = value; }
+        public bool IsOpen { get => isOpen; set => isOpen = value; }
 
         public Counter()
         {
             counterId = counterIncrementer++;
+        }
+
+        public Luggage GetNewLuggage()
+        {             
+            return new LuggageFactory().CreateLuggage();
         }
     }
 }
