@@ -19,6 +19,10 @@ namespace BaggageSortingSimulator.Model
         {
             counterId = counterIncrementer++;
         }
+        public void testc()
+        {
+
+        }
 
         public Luggage GetNewLuggage()
         {             
