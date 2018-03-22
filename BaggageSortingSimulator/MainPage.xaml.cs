@@ -25,6 +25,7 @@ namespace BaggageSortingSimulator
         public MainPage()
         {
             this.InitializeComponent();
+            
         }
     }
 }
