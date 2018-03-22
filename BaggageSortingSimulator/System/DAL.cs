@@ -34,9 +34,7 @@ namespace BaggageSortingSimulator.System
             else
             {
                 return "No destination found";
-            }
-            
-           
+            }            
         }
         public void Departure(Luggage lug)
         {
