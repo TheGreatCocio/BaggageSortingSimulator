@@ -41,8 +41,7 @@ namespace BaggageSortingSimulator.Model
                     IsOpen = false;
                     await Task.Delay(10000);
                     LuggageToBeBoarded.Clear();
-                }
-                
+                }                
             }
         }
         
