@@ -36,12 +36,12 @@ namespace BaggageSortingSimulator.Model
         {
             while (true)
             {
-                if (LuggageToBeBoarded.Count > 40)
+                if (luggageToBeBoarded.Count >= 40)
                 {
                     IsOpen = false;
                     await Task.Delay(10000);
                     LuggageToBeBoarded.Clear();
-                }                
+                }
             }
         }
         
