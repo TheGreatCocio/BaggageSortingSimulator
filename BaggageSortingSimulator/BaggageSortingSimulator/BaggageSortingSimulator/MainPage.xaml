@@ -3,15 +3,17 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:BaggageSortingSimulator"
+    xmlns:vm="using:BaggageSortingSimulator.ViewModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:VM ="using:BaggageSortingSimulator.ViewModel"
+
     mc:Ignorable="d">
 
-    <!--<Page.DataContext>
-        --><!--<VM:ViewModel/>--><!--
-    </Page.DataContext>-->
+    <Page.DataContext>
+        <vm:ViewModel/>
+    </Page.DataContext>
     
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Image Source="Assets/counter.png" HorizontalAlignment="Left" Height="100" Margin="230,200,0,0" VerticalAlignment="Top" Width="100"/>
         <Image Source="Assets/counter.png" HorizontalAlignment="Left" Height="100" Margin="230,350,0,0" VerticalAlignment="Top" Width="100"/>
@@ -91,7 +93,7 @@
                 <CompositeTransform Rotation="0.375"/>
             </Rectangle.RenderTransform>
         </Rectangle>
-       
+
         <Image Source="Assets/luggage1.png" HorizontalAlignment="Left" Height="50" Width="50" Margin="254,587,0,363"/>
         <Rectangle HorizontalAlignment="Left" Height="29" Margin="220,908,0,0" VerticalAlignment="Top" Width="189" Fill="Red" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
             <Rectangle.RenderTransform>
