@@ -21,8 +21,7 @@ namespace BaggageSortingSimulator.Model
         {
             counterId = counterIncrementer++;
         }
-        
-
+            
         public void SendLuggage()
         {
             SortingMachine.Instance.Luggages.Enqueue(lf.CreateLuggage());

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace BaggageSortingSimulator.ViewModel
 {
-    public class ViewModel
+    public class ViewModel : ViewModelBase
     {
+        public ViewModel()
+        {
+        }
     }
 }
