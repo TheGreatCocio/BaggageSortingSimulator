@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaggageSortingSimulator.Model
 {
-    public class Terminal
+    class Terminal
     {
         private static int terminalNumberIncrementer = 1;
         private int terminalNumber, destination;
@@ -35,7 +35,6 @@ namespace BaggageSortingSimulator.Model
         {
             while (true)
             {
-                CollectionChanged?.Invoke(this, new CollectionEventArgs(LuggageToBeBoarded, this.TerminalNumber));
                 if (luggageToBeBoarded.Count >= 40)
                 {
                     IsOpen = false;
@@ -45,9 +44,7 @@ namespace BaggageSortingSimulator.Model
                 await Task.Delay(1000);
             }
         }
-
-        public event EventHandler CollectionChanged;
-
+        
         public void DequeueLuggage()
         {
             LuggageToBeBoarded.Add(TerminalConveyor.Dequeue());

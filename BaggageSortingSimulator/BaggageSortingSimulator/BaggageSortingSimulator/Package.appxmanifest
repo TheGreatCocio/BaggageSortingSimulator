@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="eaeb0977-7c6d-4c06-b648-0d6fc6443615"
-    Publisher="CN=Mark"
+    Name="d025b17f-51a8-4973-9f92-1d658f07b4af"
+    Publisher="CN=jesse"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="eaeb0977-7c6d-4c06-b648-0d6fc6443615" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="d025b17f-51a8-4973-9f92-1d658f07b4af" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>BaggageSortingSimulator</DisplayName>
-    <PublisherDisplayName>Mark</PublisherDisplayName>
+    <PublisherDisplayName>jesse</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
