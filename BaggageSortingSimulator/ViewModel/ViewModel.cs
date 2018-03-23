@@ -9,14 +9,14 @@ namespace BaggageSortingSimulator.ViewModel
 {
     public class ViewModel : ViewModelBase
     {
-        private List<int> trucks = new List<int>();
+        private int[] trucks = new int[9];
         public ViewModel()
         {
             Trucks[1] = 10;
             Trucks[2] = 11;
         }
 
-        public List<int> Trucks
+        public int[] Trucks
         {
             get { return trucks; }
             set

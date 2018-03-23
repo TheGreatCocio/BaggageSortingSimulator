@@ -5,8 +5,13 @@
     xmlns:local="using:BaggageSortingSimulator"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:VM ="using:BaggageSortingSimulator.ViewModel"
     mc:Ignorable="d">
 
+    <Page.DataContext>
+        <VM:ViewModel/>
+    </Page.DataContext>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Image Source="Assets/counter.png" HorizontalAlignment="Left" Height="100" Margin="230,200,0,0" VerticalAlignment="Top" Width="100"/>
         <Image Source="Assets/counter.png" HorizontalAlignment="Left" Height="100" Margin="230,350,0,0" VerticalAlignment="Top" Width="100"/>
