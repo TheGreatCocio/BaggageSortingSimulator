@@ -28,11 +28,10 @@ namespace BaggageSortingSimulator.Model
         {
             TerminalNumber = terminalNumberIncrementer++;
             FlightPlan = new FlightPlan(TerminalNumber);
-            Task task = Task.Factory.StartNew(TakeToPlane);
-
+            Task task = Task.Factory.StartNew(TakeLuggageToPlane);
         }
 
-        public async void TakeToPlane()
+        public async void TakeLuggageToPlane()
         {
             while (true)
             {
