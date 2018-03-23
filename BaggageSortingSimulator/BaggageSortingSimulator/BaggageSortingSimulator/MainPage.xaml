@@ -7,14 +7,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 
-    mc:Ignorable="d">
+    mc:Ignorable="d" Height="1195.22" Width="1909.593">
 
     <Page.DataContext>
         <vm:ViewModel/>
     </Page.DataContext>
     
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,377,190">
         <Image Source="Assets/counter.png" HorizontalAlignment="Left" Height="100" Margin="230,200,0,0" VerticalAlignment="Top" Width="100"/>
         <Image Source="Assets/counter.png" HorizontalAlignment="Left" Height="100" Margin="230,350,0,0" VerticalAlignment="Top" Width="100"/>
         <Image Source="Assets/counter.png" HorizontalAlignment="Left" Height="100" Margin="230,500,0,0" VerticalAlignment="Top" Width="100"/>
